@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>MyHtml</title>
+    <script>
+      (function test(){
+        document.createElement("myHero");
+      })()
+    </script>
+    <style>
+      myHero {
+        display: block;
+        background: #ddd;
+        padding: 50px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>我的第一个标题</h1>
+    <p>
+      我的第一个段落。
+    </p>
+    <myHero>我的第一个元素。</myHero>
+    <article>
+      菜鸟教程 -- 学的不仅是技术，而是梦想。
+    </article>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000"></canvas>
+    <img id="scream" src="test.png" alt="The Scream" width="220" height="277"/>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+      <polygon points="100,10 40,180 190,60 10,60 160,180" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
+    </svg>
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.fillStyle="#FF0000";
+      ctx.fillRect(0, 0, 150, 75);
+
+      ctx.moveTo(0, 0);
+      ctx.lineTo(200, 200);
+      ctx.stroke();  // 每次绘制必须要有的方法
+
+      ctx.beginPath();
+      ctx.arc(95, 50, 40, 0, 2*Math.PI);
+      ctx.stroke();
+
+      ctx.font = "30px Arial";
+      ctx.strokeText("Hello World", 10, 50);
+
+      // 创建渐变
+      var grd = ctx.createLinearGradient(0, 0, 200, 0);
+      grd.addColorStop(0, "red");
+      grd.addColorStop(1, "white");
+
+      // 填充渐变
+      ctx.fillStyle = grd;
+      ctx.fillRect(10, 10, 150, 80);
+
+      var img = document.getElementById("scream");
+      img.onload = function(){
+        ctx.drawImage(img, 20, 10);
+      }
+    </script>
+  </body>
+</html>

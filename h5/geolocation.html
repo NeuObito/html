@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <tile>拖放</tile>
+  </head>
+  <body>
+    <p id="demo">
+      点击获取地理位置：
+    </p>
+    <button onclick="getLocation()">点击获取</button>
+    <script>
+      var x = document.getElementById("demo");
+
+      function getLocation(){
+        if(navigator.geolocation){
+          navigator.geolocation.watchPosition(showPosition);
+        }
+        else{
+          x.innerHTML="该浏览器不支持获取地理位置。"
+        }
+      }
+
+      function showPosition(position){
+        x.innerHTML = "纬度：" + position.coords.latitude;
+      }
+    </script>
+  </body>
+</html>
