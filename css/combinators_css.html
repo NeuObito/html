@@ -14,8 +14,13 @@
         background-color: green;
       }
 
-      /* 子元素选择器，以空格分隔 */
+      /* 相邻兄弟选择器，以空格分隔 */
       .div2+p{
+        background-color: green;
+      }
+
+      /* 普通相邻兄弟选择器，以空格分隔 */
+      .div2~p{
         background-color: green;
       }
     </style>
@@ -25,13 +30,15 @@
       <p>段落 1. 在div中。</p>
       <p>段落 2. 在div中。</p>
     </div>
-    <p>段落 1. 在div中。</p>
-    <p>段落 2. 在div中。</p>
+
 
     <div class="div2">
       <h2>My name is Donald</h2>
       <p>I live in Duckburg.</p>
     </div>
     <p>My best friend is Mickey.</p>
+
+    <p>段落 1. 在div中。</p>
+    <p>段落 2. 在div中。</p>
   </body>
 </html>
