@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"  />
+    <title>CSS display</title>
+    <style>
+      h1.hidden {
+        visibility: hidden;
+      }
+
+      h1.hidden2 {
+        display: none;
+      }
+
+      /* 层级样式 */
+      li {
+        display: inline;
+      }
+      li a{
+        text-decoration: none;
+      }
+      /*a {
+        text-decoration: none;
+      }*/
+
+      span {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>这是一个可见标题</h1>
+    <h1 class="hidden">这是一个隐藏标题</h1>  <!-- 隐藏之后任然占据空间 -->
+    <p>注意, 实例中的隐藏标题仍然占用空间。</p>
+    <h1 class="hidden2">这是隐藏的标题，但是不占空间。</h1>
+
+    <ul>
+      <li><a href="/html/" target="_blank">HTML</a></li>
+      <li><a href="/css/" target="_blank">CSS</a></li>
+      <li><a href="/js/" target="_blank">JavaScript</a></li>
+      <li><a href="/xml/" target="_blank">XML</a></li>
+    </ul>
+
+    <h2>Nirvana</h2>
+    <span>Record: MTV Unplugged in New York</span>
+    <span>Year: 1993</span>
+    <h2>Radiohead</h2>
+    <span>Record: OK Computer</span>
+    <span>Year: 1997</span>
+  </body>
+</html>
