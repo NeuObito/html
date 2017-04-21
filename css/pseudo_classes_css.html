@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"  />
+    <title>CSS padding</title>
+    <style>
+      p:first-line{
+          color: #ff0000;
+          font-variant: small-caps;
+      }
+
+      p::first-letter{
+        color: red;
+        font-size: xx-large;
+      }
+
+      p:first-child{
+        color: blue;
+      }
+
+      p > i:first-child{
+        color: blue;
+      }
+
+      /* 匹配所有作为第一个子元素的 <p> 元素中的所有 <i> 元素，即p元素为第一个元素 */
+      p:first-child i{
+        color: green;
+      }
+
+      q:lang(no){
+        quotes: "~" "~";
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is some text.</p>
+    <p>This is some text.</p>
+
+    <p>I am a <i>strong</i> man. I am a <i>strong</i> man.</p>
+    <p>I am a <i>strong</i> man. I am a <i>strong</i> man.</p>
+
+    <p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+  </body>
+</html>
